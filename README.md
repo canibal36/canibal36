@@ -1,10 +1,10 @@
 Leeme.....
- ### Hola 👋, Leonel.inc
+ ### Hola 👋, Soy Leonel.inc
 #### Leonel Arízaga Diaz
 [Leonel Arízaga Diaz]
 
 estoy trabajando en un html para este mi leeme...
-
+asi que esperalo jajaja.
 
 Hola soy leonel y este es mi git hub, para saber mas de mi o ponerte en contacto con migo visita mi web https://leonelarizaga.pro
 

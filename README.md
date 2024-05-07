@@ -3,7 +3,7 @@ Leeme.....
 #### Leonel Arízaga Diaz
 [Leonel Arízaga Diaz]
 
-(https://arturssmirnovs.github.io/github-profile-readme-generator/images/banner.png)
+estoy trabajando en un html para este mi leeme...
 
 
 Hola soy leonel y este es mi git hub, para saber mas de mi o ponerte en contacto con migo visita mi web https://leonelarizaga.pro

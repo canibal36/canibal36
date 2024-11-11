@@ -1,102 +1,158 @@
-import Link from 'next/link'
-import Marquee from 'react-fast-marquee'
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    // Esto será para agregar un poco de animación simple si lo deseas.
+    const typewriter = document.querySelector('.typewriter');
+    if (typewriter) {
+      typewriter.classList.add('animate-typewriter');
+    }
+  }, []);
+
   return (
-    <>
-      <section id="about" className="section-hero-2 position-relative pt-130 pb-3">
-        <div className="container hero-2">
-          <div className="border border-1 rounded-3">
-            <div className="box-linear-animation position-relative z-1">
-              <div className="row align-items-end py-60">
-                <div className="col-lg-5 ps-lg-5 text-lg-start text-center">
-                  <div className="position-relative mb-lg-0 mb-5">
-                    {/* Aquí puedes cambiar la imagen de la persona */}
-                    <img src="assets/imgs/home-page-2/hero-1/people.png" alt="Leonel Arízaga" />
-                    <div className="position-absolute end-0 top-100 translate-middle-y icon-decorate">
-                      {/* Aquí puedes poner un ícono decorativo si lo prefieres */}
-                      <img src="assets/imgs/home-page-2/hero-1/icon.svg" alt="decoración" />
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 mx-lg-auto col-md-12">
-                  <div className="p-lg-0 p-md-8 p-3">
-                    <div className="text-secondary-2 d-flex align-items-center">
-                      &lt;span&gt;
-                      <div className="text-dark">
-                        <div className="typewriter">
-                          <h1 className="text-dark">Leonel Arízaga Díaz</h1>
-                        </div>
-                      </div>
-                      &lt;/span&gt;
-                    </div>
-                    <h1 className="fs-50 my-3">
-                      Programador <span className="text-linear-4">{'{'}Full Stack{'}'}</span> Web &amp; App Developer
-                      <span className="flicker">_</span>
-                    </h1>
-                    <p className="mb-6 text-secondary-2">
-                      &lt;p&gt;<span className="text-dark">Con experiencia en tecnologías como</span>{' '}
-                      <span className="text-secondary-2">NodeJS</span>, <span className="text-secondary-2">React</span>,{' '}
-                      <span className="text-secondary-2">Angular</span>, <span className="text-secondary-2">Laravel</span>{' '}
-                      <span className="text-dark">y más. Entrego soluciones web robustas e innovadoras.</span>&lt;/p&gt;
-                    </p>
-                    <div className="row">
-                      <div className="col-7">
-                        {/* Carausel Scroll */}
-                        <Marquee className="carouselTicker carouselTicker-left position-relative z-1 mt-lg-0 mt-8">
-                          <ul className="carouselTicker__list ">
-                            <li className="carouselTicker__item">
-                              <Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-                                <img src="assets/imgs/home-page-2/hero-1/icon-1.svg" alt="brand" />
-                              </Link>
-                            </li>
-                            <li className="carouselTicker__item">
-                              <Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-                                <img src="assets/imgs/home-page-2/hero-1/icon-2.svg" alt="brand" />
-                              </Link>
-                            </li>
-                            <li className="carouselTicker__item">
-                              <Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-                                <img src="assets/imgs/home-page-2/hero-1/icon-3.svg" alt="brand" />
-                              </Link>
-                            </li>
-                            <li className="carouselTicker__item">
-                              <Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-                                <img src="assets/imgs/home-page-2/hero-1/icon-4.svg" alt="brand" />
-                              </Link>
-                            </li>
-                            <li className="carouselTicker__item">
-                              <Link href="#" className="brand-logo icon_60 icon-shape rounded-3">
-                                <img src="assets/imgs/home-page-2/hero-1/icon-5.svg" alt="brand" />
-                              </Link>
-                            </li>
-                          </ul>
-                        </Marquee>
-                      </div>
-                      <div className="col-5 d-flex align-items-end">
-                        <span className="fs-6 text-300 mb-2">...y mucho más</span>
-                      </div>
-                    </div>
-                    {/* Aquí puedes añadir un enlace a tu CV o cualquier documento */}
-                    <Link href="https://leonelarizaga.pro" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
-                      <i className="ri-download-line text-primary-2" />
-                      [ Visita mi Web ]
-                    </Link>
-                    <Link href="https://github.com/leonelarizaga" className="btn me-2 text-300 ps-0 mt-4" target="_blank">
-                      <i className="ri-github-line text-primary-2" />
-                      [ Mi GitHub ]
-                    </Link>
-                  </div>
-                </div>
-              </div>
+    <div className="home-container">
+      <section id="about" className="hero-section">
+        <div className="hero-container">
+          <div className="image-container">
+            <img src="assets/imgs/people.png" alt="Leonel Arízaga" className="hero-image" />
+          </div>
+          <div className="text-container">
+            <h1 className="name">Leonel Arízaga Díaz</h1>
+            <h2 className="title">Programador Full Stack Web &amp; App Developer</h2>
+            <p className="description">
+              Soy un desarrollador con experiencia en tecnologías como NodeJS, React, Angular, y Laravel. Me apasiona crear soluciones web innovadoras y robustas.
+            </p>
+            <div className="skills">
+              <p className="skill">NodeJS</p>
+              <p className="skill">React</p>
+              <p className="skill">Angular</p>
+              <p className="skill">Laravel</p>
             </div>
           </div>
         </div>
-        <div className="background position-absolute top-0 start-0 w-100 h-100">
-          <img className="bg-w" src="assets/imgs/home-page-2/hero-1/bg.png" alt="background" />
-          <img className="bg-d" src="assets/imgs/home-page-2/hero-1/bg-dark.png" alt="background dark" />
-        </div>
       </section>
-    </>
-  )
+
+      <style jsx>{`
+        /* Estilos generales */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Arial', sans-serif;
+        }
+
+        body {
+          background-color: #f4f4f4;
+          font-size: 16px;
+          line-height: 1.6;
+          color: #333;
+        }
+
+        /* Sección principal */
+        .hero-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #ff7e5f, #feb47b);
+          padding: 20px;
+        }
+
+        /* Contenedor del contenido */
+        .hero-container {
+          display: flex;
+          align-items: center;
+          max-width: 1200px;
+          width: 100%;
+          background-color: white;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Imagen */
+        .image-container {
+          flex: 1;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .hero-image {
+          width: 100%;
+          max-width: 300px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contenedor de texto */
+        .text-container {
+          flex: 2;
+          padding: 40px;
+        }
+
+        .name {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .title {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #555;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.5;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+
+        .skills {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .skill {
+          font-size: 1rem;
+          font-weight: 600;
+          color: #fff;
+          background-color: #333;
+          padding: 8px 15px;
+          border-radius: 30px;
+          text-transform: capitalize;
+          transition: background-color 0.3s ease;
+        }
+
+        .skill:hover {
+          background-color: #feb47b;
+        }
+
+        /* Animación de tipo escritor */
+        .animate-typewriter {
+          animation: typewriter 4s steps(40) 1s forwards;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        /* Efecto de escritura */
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      `}</style>
+    </div>
+  );
 }
